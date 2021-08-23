@@ -71,11 +71,11 @@ export default function Main(){
                 
                <Route path="/course/:id"  render={(props)=><SingleCard {...props}  onAdd={onAdd} />} />
 
-  {/*              {auth === true?
+              {auth === true?
               <Route exact path="/cart"  component={(props)=><Cart {...props} cartItems={cartItems}  onRemove={onRemove} auth={auth} logoutHandler={logoutHandler} loginHandler={loginHandler} />} />
                  :<Redirect to='/login'/>}
-                  */}
-                 <PrivateRoutes auth={auth} path='/cart' component={(props) => <Cart {...props} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}  />} />
+                  
+                {/*  <PrivateRoutes auth={auth} path='/cart' component={(props) => <Cart {...props} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}  />} /> */}
 
 
               <Route exact path="/payment" component={Payment} cartItems={cartItems}/> 
